@@ -14,8 +14,8 @@ import helpIcon from "./SVG/help-icon.svg";
 import downArrow from "./SVG/angle-down-solid.svg";
 import upArrow from "./SVG/angle-up-solid.svg";
 import evano from "./photos/evano.webp";
-import sara from "./photos/sara.jpg";
-import sam from "./photos/sam.jpg";
+import danny from "./photos/danny.jpeg";
+import anna from "./photos/anna.png";
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,14 +47,14 @@ const Navbar = () => {
             image: evano,
         },
         {
-            name: 'Sara',
+            name: 'Anna markov',
             role: 'Web developers',
-            image: sara,
+            image: anna,
         },
         {
-            name: 'Sam',
+            name: 'Danny',
             role: 'Data Scientist',
-            image: sam,
+            image: danny,
         }
     ];
 
@@ -127,7 +127,7 @@ const Navbar = () => {
                                             onClick={() => handleUserClick(index)}
                                         >
                                             <div className="flex gap-2 items-center">
-                                                <img src={user.image} alt={user.name} className="w-10 h-10 rounded-full" />
+                                                <img src={user.image} alt={user.name} className="w-10 h-10 rounded-full" loading='lazy' />
                                                 <p className="flex flex-col">
                                                     <span className="text-white font-medium">{user.name}</span>
                                                     <span className="text-gray-400 -mt-1">{user.role}</span>
